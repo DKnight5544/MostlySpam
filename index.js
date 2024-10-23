@@ -22,6 +22,13 @@ function begin() {
 
 function updateCashtagList() {
     let param = window.location.search.substring(1);
+    if (param) {
+        _cashtags = decodeCashtags(param);
+    }
+    else {
+        _cashtags = _defaultCashtags;
+        reloadPage();
+    }
     _cashtags = param ? decodeCashtags(param) : _defaultCashtags;
     let cashtagList = document.getElementById('cashtagList');
     cashtagList.innerHTML = '<ul>' + _cashtags.slice(0, 5).map(cashtag => '<li>$' + cashtag + '</li>').join('') + '</ul>';
@@ -65,14 +72,14 @@ function handleSubmit() {
                 _cashtags.shift();
             }
 
-            const encodedCashtags = encodeCashtags(_cashtags);
+            reloadPage();
 
-            // Update the URL without reloading the page
-            const newUrl = window.location.pathname + '?' + encodedCashtags;
-            window.history.replaceState({}, '', newUrl); // Update the URL without reloading
-
-            updateCashtagList(); // Update the displayed cashtag list without page reload
-            document.getElementById('inputField').value = ''; // Clear input field after adding
         }
     }
+}
+
+function reloadPage() {
+    const encodedCashtags = encodeCashtags(_cashtags);
+    const newUrl = window.location.pathname + '?' + encodedCashtags;
+    location.replace(newUrl);
 }
