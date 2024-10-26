@@ -1,8 +1,7 @@
 
 :root {
     /*--primary-color: rgb(145, 47, 44);*/
-    --primary-color:  #2a89b8;
-   
+    --primary-color: #a7302a;
 }
 
 body {
@@ -25,11 +24,14 @@ body {
 img {
     margin: 0;
     margin-bottom: 0px;
+    margin-left:20px;
+    width:80%;
 }
 
 a {
     font-weight: bold;
     color: var(--primary-color);
+    text-align:center;
 }
 
 
