@@ -7,8 +7,10 @@ function begin() {
     script.src = 'index.js?v=' + new Date().getTime();
     document.body.appendChild(script);
 
-    // Add event listener for the submit button
-    document.getElementById('submitButton').addEventListener('click', handleSubmit);
+    // Add event listener for the submit button, passing the event
+    document.getElementById('submitButton').addEventListener('click', function (event) {
+        handleSubmit(event);
+    });
 
     // Add event listener for the Enter key on the input field
     document.getElementById('inputField').addEventListener('keydown', function (event) {
@@ -54,7 +56,8 @@ function decodeCashtags(encodedString) {
     }
 }
 
-function handleSubmit() {
+function handleSubmit(event) {
+    //event.preventDefault(); // Prevent default behavior for form submission
     let newCashtag = document.getElementById('inputField')
         .value
         .trim()
