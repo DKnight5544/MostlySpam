@@ -67,6 +67,16 @@ ul {
         margin-bottom: 10px;
     }
 
+ol {
+    padding-left: 50px;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+    ol li {
+        margin-bottom: 10px;
+    }
+
 .spacer {
     height: 15px;
 }
