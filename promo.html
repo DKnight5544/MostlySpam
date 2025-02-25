@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MostlySpam.com|[id]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: black;
+        }
+
+        /* Ensure full height layout */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Kalam', sans-serif;
+            transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+        }
+
+        /* Wrapper for content, centering sections */
+        .container {
+            opacity: 0;
+            width: 100%;
+            max-width: 800px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0px;
+            padding-bottom: 0px;
+            box-sizing: border-box;
+            text-align: center;
+            transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+        }
+
+        .header, .footer {
+            background: var(--primary-color);
+            color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .banner {
+            width: 100%;
+            display: block;
+        }
+
+        image {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        h2 {
+            font-size: 25px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        p {
+            margin-top: 15px;
+            margin-bottom: 0;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 24px;
+            text-align: left;
+        }
+
+        .centered {
+            text-align: center;
+            color: orangered;
+        }
+
+
+        @media (max-width: 600px) {
+
+            p {
+                font-size: 21px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+
+    <script>
+
+        function begin() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const refValue = urlParams.get("ref") || "0"; // Default to "0" if missing
+
+            // Replace [id] in the specific element
+            const replaceElement = document.getElementById("RefTag");
+            if (replaceElement) {
+                replaceElement.innerHTML = replaceElement.innerHTML.replace(/\[id\]/g, refValue);
+            }
+
+            // Replace [id] in the page title
+            document.title = document.title.replace(/\[id\]/g, refValue);
+
+            // FadeIn 
+            let cont = document.getElementById("container");
+            cont.style.opacity = "1";
+        }
+
+    </script>
+
+
+</head>
+
+<body onload="begin();">
+
+    <div id="container" class="container">
+        <img class="banner" src="/images/banner.png" />
+        <div class="header">
+            <h2>WELCOME TO MostlySpam.COM!</h2>
+        </div>
+        <br/>
+        <p>
+            <strong>Would you trade $20</strong> in exchange for a steady, growing,
+            stream of <strong>$20 bills?</strong>
+        </p>
+
+        <p class="centered"><strong>Do you think most people would?</strong></p>
+
+
+        <p>
+            <strong>If you answered "yes"</strong>, then get a
+            <strong>promo page</strong> like this one for just <strong>$20</strong>, and share it.
+        </p>
+
+        <p>
+            You will earn <strong>$20</strong> for each new <strong>promo page</strong> you sell
+            starting with #3. You will also earn <strong>$20</strong> each for their first 2,
+            and their first 2, and their first 2, and their first 2, and their first 2, and their first 2,
+            and their first 2, and their first 2...
+        </p>
+
+        <p>
+            <strong>Promo Page</strong> owners can buy MostlySpam.com links for 
+            just <strong>$5 each!</strong>
+        </p>
+
+        <p>
+            <strong id="RefTag">Text "MostlySpam|[id]" to ...</strong>.
+        </p>
+
+        <br />
+
+        <div class="footer">
+            <h2>971-236-1579</h2>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
