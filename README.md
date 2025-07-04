@@ -1,2 +1,2 @@
-# MostlySpam
-A Spam Based Chain Letter / Book Promo
+# MostlySpam.com
+Another fine Dorky Domain!

@@ -1,13 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <meta property="og:title" content="MostlySpam.com" />
+    <meta property="og:description" content="Another Fine Dorky Domain!" />
+    <meta property="og:image" content="https://mostlyspam.com/index/banner.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:url" content="https://mostlyspam.com/" />
+    <meta property="og:type" content="website" />
+
+    <title>MostlySpam.com</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://DorkyDomains.com/shared/stylefile2.css">
+
+    <script src="https://DorkyDomains.com/shared/scriptfile2.js"></script>
+
     <script>
-        window.location.replace("/dave.html");
+        const AZURE = "https://ddkvp.azurewebsites.net/api/hub/mostlyspam/index";
     </script>
+
+    <style>
+        :root {
+            --scrolling-banner-back-color: #9d180d;
+            --scrolling-banner-fore-color: white;
+            --button-back-color: white;
+            --button-fore-color: #9d180d; 
+            --button-border-color:#9d180d;
+        }
+    </style>
+
 </head>
-<body>
+
+
+<body onload="begin();">
+
+    <div class="container">
+        <img class="banner" src="index/banner.png" />
+        <div class="header">
+            <div id="ScrollingBanner"></div>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div class="button-container">
+            <div id="CustomButtons"></div>
+        </div>
+
+    </div>
+
 </body>
+
 </html>
